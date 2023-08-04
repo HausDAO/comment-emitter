@@ -61,13 +61,22 @@ export const EmitMenu = ({ emitId }: { emitId?: string }) => {
       <DropdownContent>
         <>
           <DropdownItem key="bm" asChild>
-            <RegistryMenuLink to={`/`}>bookmark</RegistryMenuLink>
+            <RegistryMenuLink to={`/`}>
+              none of this is wired up{" "}
+            </RegistryMenuLink>
           </DropdownItem>
-          {(emitId && <DropdownItem key="replies" asChild>
-            <RegistryMenuLink to={`/emit/${emitId}`}>replies</RegistryMenuLink>
-          </DropdownItem>)}
+          <DropdownItem key="bm" asChild>
+            <RegistryMenuLink to={`/`}>bookmark </RegistryMenuLink>
+          </DropdownItem>
+          {emitId && (
+            <DropdownItem key="replies" asChild>
+              <RegistryMenuLink to={`/emit/${emitId}`}>
+                replies
+              </RegistryMenuLink>
+            </DropdownItem>
+          )}
           <DropdownItem key="goto" asChild>
-            <RegistryMenuLink to={`/`}>go to link</RegistryMenuLink>
+            <RegistryMenuLink to={`/`}>go to external link</RegistryMenuLink>
           </DropdownItem>
           <DropdownItem key="share" asChild>
             <RegistryMenuLink to={`/`}>share</RegistryMenuLink>
